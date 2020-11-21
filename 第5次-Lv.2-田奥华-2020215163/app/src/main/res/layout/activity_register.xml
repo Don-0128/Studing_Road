@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textColor="#FFAD33"
+        android:hint="用户名："
+        android:background="@drawable/bg_username"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/btn_return"
+        />
+
+    <EditText
+        android:id="@+id/et_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textColor="#FFAD33"
+        android:hint="请输入你的密码："
+        android:layout_below="@id/et_1"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_username"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:drawableLeft="@drawable/icon_code"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        />
+
+    <EditText
+        android:id="@+id/et_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textColor="#FFAD33"
+        android:hint="请确认你的密码："
+        android:layout_below="@id/et_2"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_username"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:drawableLeft="@drawable/icon_code"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        />
+
+    <Button
+        android:id="@+id/btn_conRegister"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_3"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_login"
+        android:text="立即成为绅士"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:textSize="30dp"
+        android:background="#fff"
+        android:textColor="#F5CCFF"/>
+
+
+
+
+</RelativeLayout>

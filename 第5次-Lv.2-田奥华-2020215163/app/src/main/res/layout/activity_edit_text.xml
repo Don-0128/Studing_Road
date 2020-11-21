@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:gravity="center"
+        android:textSize="75sp"
+        android:textColor="#BE00EE"/>
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你好，欢迎来到picACG！"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_below="@+id/tv_login"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/et_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textColor="#FFAD33"
+        android:hint="用户名："
+        android:background="@drawable/bg_username"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tv_welcome"
+        />
+
+    <EditText
+        android:id="@+id/et_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textColor="#FFAD33"
+        android:hint="密码："
+        android:layout_below="@id/et_1"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:background="@drawable/bg_username"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:drawableLeft="@drawable/icon_code"
+        android:drawablePadding="5dp"
+        android:maxLines="1"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/et_2"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_login"
+        android:text="登录"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="还不是绅士？"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_below="@+id/btn_login"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        />
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/tv_warn"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_login"
+        android:text="立即注册"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="Google账号登陆"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:text="Facebook账号登陆"
+        android:layout_marginLeft="250dp"
+        android:textSize="15sp"
+        />
+
+</RelativeLayout>
