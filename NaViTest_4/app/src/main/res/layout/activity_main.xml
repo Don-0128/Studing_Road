@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0066FF"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp">
+
+        <EditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_bg"
+            android:hint="请输入地址"
+            android:imeOptions="actionSearch"
+            android:paddingStart="12dp"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="14sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--地图-->
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginTop="68dp">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_satellite"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/icon_satellite_2"
+        android:clickable="true"
+         app:fabSize="auto"
+        android:backgroundTint="#FFF"
+        app:backgroundTintMode="screen"
+        app:hoveredFocusedTranslationZ="18dp"
+        app:pressedTranslationZ="18dp"
+        />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_nightMode"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/fab_satellite"
+            android:src="@drawable/icon_night_mode"
+            android:clickable="true"
+            app:fabSize="auto"
+            android:backgroundTint="#FFF"
+            app:backgroundTintMode="screen"
+            app:hoveredFocusedTranslationZ="18dp"
+            app:pressedTranslationZ="18dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_dayMode"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/fab_nightMode"
+            android:src="@drawable/icon_day_mode"
+            android:clickable="true"
+            app:fabSize="auto"
+            android:backgroundTint="#FFF"
+            app:backgroundTintMode="screen"
+            app:hoveredFocusedTranslationZ="18dp"
+            app:pressedTranslationZ="18dp"/>
+
+        <Button
+            android:id="@+id/btn_toNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:maxLines="1"
+            android:text="导航界面"
+            android:textSize="16sp"
+            android:background="@drawable/bg_navigation"
+            />
+    </RelativeLayout>
+
+    <!--浮动按钮-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_poi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        android:onClick="queryPOI"
+        app:fabSize="mini"
+        android:src="@drawable/icon_favorite_red"
+        android:visibility="invisible"
+        android:backgroundTint="#FFF"
+        android:backgroundTintMode="screen"
+        app:hoveredFocusedTranslationZ="18dp"
+        app:pressedTranslationZ="18dp"/>
+
+    <!--浮空按钮，清空标记点-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_clear_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_poi"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        android:onClick="clearAllMarker"
+        app:fabSize="mini"
+        android:src="@drawable/icon_clear"
+        android:visibility="invisible"
+        android:backgroundTint="@color/white"
+        app:backgroundTintMode="screen"
+        app:hoveredFocusedTranslationZ="18dp"
+        app:pressedTranslationZ="18dp"/>
+
+
+</RelativeLayout>
